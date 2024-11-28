@@ -4,6 +4,6 @@ const getData = () => {
 }
 
 const setData = () => {
-    console.log(SetData);
+    console.log('SetData');
     
 }
