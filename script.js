@@ -19,6 +19,9 @@ const getData = ({ url, data, method }) => {
             method: 'POST'
         })
     })
+    .catch(() => {
+        getText.textContent = 'Не получено :('
+    })
 }
 
 const sendData = ({ url, data, method }) => {
@@ -32,6 +35,9 @@ const sendData = ({ url, data, method }) => {
     }).then(response => response.json())  
     .then(() => {
         sendText.textContent = 'Отправлено!'
+    })
+    .catch(() => {
+        getText.textContent = 'Не отправлено :('
     })
 }
 getButton.addEventListener('click', () => {
