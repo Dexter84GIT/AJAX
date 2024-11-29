@@ -1,0 +1,30 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 5vh 0;
+}
+button, input[type='submit'] {
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: #ff7800;
+    border: 1px solid #ff7800;
+    margin: 40px;
+    cursor: pointer;
+}
+.get {
+    background: #000;
+}
+.send {
+    background: #180090;
+}
+p {
+    padding: 20px 5px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #0e0e0e;
+}
