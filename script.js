@@ -10,7 +10,15 @@ const getData = ({ url, data, method }) => {
     return fetch(url, {
         data: data,
         method: method
-    }).then(response => response.json())  
+    })
+    .then(response => response.json())  
+    .then(() => {
+        sendData({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            data: data,
+            method: 'POST'
+        })
+    })
 }
 
 const sendData = ({ url, data, method }) => {
@@ -22,6 +30,9 @@ const sendData = ({ url, data, method }) => {
             'Content-type': 'multipart/form-data',
           },
     }).then(response => response.json())  
+    .then(() => {
+        sendText.textContent = 'Отправлено!'
+    })
 }
 getButton.addEventListener('click', () => {
 
